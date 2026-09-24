@@ -9,15 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #0a0a0a;
-            --bg-card: #0d1117;
-            --bg-code: #161b22;
-            --text-primary: #e6edf3;
-            --text-secondary: #8b949e;
-            --accent: #76B900;
-            --accent-dim: #76B90044;
-            --accent-glow: #76B90033;
-            --border: #21262d;
+            --bg-primary: #0f2027;
+            --bg-card: #13272f;
+            --bg-code: #182f38;
+            --text-primary: #ede7dd;
+            --text-secondary: #8ca5a9;
+            --accent: #83c395;
+            --accent-dim: #83c39544;
+            --accent-glow: #83c39533;
+            --border: #23404a;
             --font-display: 'Space Grotesk', sans-serif;
             --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
             --font-body: 'Inter', sans-serif;
@@ -165,7 +165,7 @@
             border: 1px solid var(--border);
             padding: 0.05rem 0.35rem;
             border-radius: 3px;
-            color: #c9d1d9;
+            color: #cfd7d1;
         }
         .code-block {
             background: var(--bg-code);
@@ -178,7 +178,7 @@
             font-family: var(--font-mono);
             font-size: 0.75rem;
             color: var(--accent);
-            background: rgba(118, 185, 0, 0.08);
+            background: rgba(131,195,149,0.08);
             padding: 0.4rem 1rem;
             border-bottom: 1px solid var(--border);
         }
@@ -187,17 +187,17 @@
             font-family: var(--font-mono);
             font-size: 0.85rem;
             line-height: 1.6;
-            color: #c9d1d9;
+            color: #cfd7d1;
             background: transparent;
             border: none;
             padding: 0;
         }
-        .kw { color: #ff7b72; }
-        .fn { color: #d2a8ff; }
-        .str { color: #a5d6ff; }
-        .cm { color: #8b949e; font-style: italic; }
-        .num { color: #79c0ff; }
-        .type { color: #ffa657; }
+        .kw { color: #f48f70; }
+        .fn { color: #d4c0ea; }
+        .str { color: #c3dbea; }
+        .cm { color: #8ca5a9; font-style: italic; }
+        .num { color: #a8cee8; }
+        .type { color: #eac48b; }
         .table-wrap {
             overflow-x: auto;
             margin: 1.25rem 0;
@@ -221,7 +221,7 @@
             color: var(--text-secondary);
         }
         tr:last-child td { border-bottom: none; }
-        tr:nth-child(even) td { background: rgba(13, 17, 23, 0.5); }
+        tr:nth-child(even) td { background: rgba(19,39,47,0.5); }
         .diagram-flow {
             display: flex;
             flex-wrap: wrap;
@@ -245,7 +245,7 @@
             text-align: center;
             white-space: nowrap;
         }
-        .diagram-box.accent { border-color: var(--accent); color: var(--accent); background: rgba(118, 185, 0, 0.08); }
+        .diagram-box.accent { border-color: var(--accent); color: var(--accent); background: rgba(131,195,149,0.08); }
         .diagram-box.dim { color: var(--text-secondary); border-color: var(--border); }
         .diagram-arrow { color: var(--accent); font-size: 1.3rem; font-weight: 700; }
         .diagram-vertical {
@@ -366,8 +366,8 @@
             margin-left: 0.3rem;
         }
         .badge.ok    { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
-        .badge.warn  { border-color: #ffa657; color: #ffa657; background: rgba(255,166,87,0.08); }
-        .badge.bad   { border-color: #ff7b72; color: #ff7b72; background: rgba(255,123,114,0.08); }
+        .badge.warn  { border-color: #eac48b; color: #eac48b; background: rgba(234,196,139,0.08); }
+        .badge.bad   { border-color: #f48f70; color: #f48f70; background: rgba(244,143,112,0.08); }
         @media (max-width: 640px) {
             .slide { padding: 3rem 1rem; min-height: auto; }
             .slide-number { font-size: 3rem; top: 1.5rem; right: 1rem; }
@@ -498,81 +498,81 @@
         <svg viewBox="0 0 760 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Video retrieval pipeline diagram">
             <defs>
                 <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                    <path d="M0,0 L10,5 L0,10 z" fill="#76B900"/>
+                    <path d="M0,0 L10,5 L0,10 z" fill="#83c395"/>
                 </marker>
                 <marker id="arrDim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                    <path d="M0,0 L10,5 L0,10 z" fill="#8b949e"/>
+                    <path d="M0,0 L10,5 L0,10 z" fill="#8ca5a9"/>
                 </marker>
             </defs>
 
             <g font-family="JetBrains Mono, monospace" font-size="11">
-                <text x="20" y="22" fill="#76B900" font-weight="700" letter-spacing="1">INGEST &mdash; one-time, batch</text>
+                <text x="20" y="22" fill="#83c395" font-weight="700" letter-spacing="1">INGEST &mdash; one-time, batch</text>
 
-                <rect x="20"  y="40" width="120" height="48" rx="6" fill="#161b22" stroke="#21262d"/>
-                <text x="80" y="60" text-anchor="middle" fill="#e6edf3">Video streams</text>
-                <text x="80" y="76" text-anchor="middle" fill="#8b949e" font-size="9">N cameras, 24/7</text>
+                <rect x="20"  y="40" width="120" height="48" rx="6" fill="#182f38" stroke="#23404a"/>
+                <text x="80" y="60" text-anchor="middle" fill="#ede7dd">Video streams</text>
+                <text x="80" y="76" text-anchor="middle" fill="#8ca5a9" font-size="9">N cameras, 24/7</text>
 
-                <line x1="140" y1="64" x2="170" y2="64" stroke="#76B900" stroke-width="2" marker-end="url(#arr)"/>
+                <line x1="140" y1="64" x2="170" y2="64" stroke="#83c395" stroke-width="2" marker-end="url(#arr)"/>
 
-                <rect x="170" y="40" width="130" height="48" rx="6" fill="#161b22" stroke="#21262d"/>
-                <text x="235" y="60" text-anchor="middle" fill="#e6edf3">Shot detect /</text>
-                <text x="235" y="76" text-anchor="middle" fill="#e6edf3">clip chunker</text>
+                <rect x="170" y="40" width="130" height="48" rx="6" fill="#182f38" stroke="#23404a"/>
+                <text x="235" y="60" text-anchor="middle" fill="#ede7dd">Shot detect /</text>
+                <text x="235" y="76" text-anchor="middle" fill="#ede7dd">clip chunker</text>
 
-                <line x1="300" y1="64" x2="330" y2="64" stroke="#76B900" stroke-width="2" marker-end="url(#arr)"/>
+                <line x1="300" y1="64" x2="330" y2="64" stroke="#83c395" stroke-width="2" marker-end="url(#arr)"/>
 
-                <rect x="330" y="40" width="170" height="48" rx="6" fill="#161b22" stroke="#76B900"/>
-                <text x="415" y="60" text-anchor="middle" fill="#76B900" font-weight="700">Qwen3-Embedding-VL</text>
-                <text x="415" y="76" text-anchor="middle" fill="#8b949e" font-size="9">clip &rarr; 256&ndash;1024-d vector</text>
+                <rect x="330" y="40" width="170" height="48" rx="6" fill="#182f38" stroke="#83c395"/>
+                <text x="415" y="60" text-anchor="middle" fill="#83c395" font-weight="700">Qwen3-Embedding-VL</text>
+                <text x="415" y="76" text-anchor="middle" fill="#8ca5a9" font-size="9">clip &rarr; 256&ndash;1024-d vector</text>
 
-                <line x1="500" y1="64" x2="530" y2="64" stroke="#76B900" stroke-width="2" marker-end="url(#arr)"/>
+                <line x1="500" y1="64" x2="530" y2="64" stroke="#83c395" stroke-width="2" marker-end="url(#arr)"/>
 
-                <rect x="530" y="40" width="130" height="48" rx="6" fill="#161b22" stroke="#21262d"/>
-                <text x="595" y="60" text-anchor="middle" fill="#e6edf3">Vector index</text>
-                <text x="595" y="76" text-anchor="middle" fill="#8b949e" font-size="9">HNSW / IVF-PQ</text>
+                <rect x="530" y="40" width="130" height="48" rx="6" fill="#182f38" stroke="#23404a"/>
+                <text x="595" y="60" text-anchor="middle" fill="#ede7dd">Vector index</text>
+                <text x="595" y="76" text-anchor="middle" fill="#8ca5a9" font-size="9">HNSW / IVF-PQ</text>
 
-                <line x1="595" y1="88" x2="595" y2="250" stroke="#8b949e" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrDim)"/>
-                <text x="610" y="170" fill="#8b949e" font-size="9">queried by</text>
-                <text x="610" y="184" fill="#8b949e" font-size="9">ANN stage</text>
+                <line x1="595" y1="88" x2="595" y2="250" stroke="#8ca5a9" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrDim)"/>
+                <text x="610" y="170" fill="#8ca5a9" font-size="9">queried by</text>
+                <text x="610" y="184" fill="#8ca5a9" font-size="9">ANN stage</text>
             </g>
 
-            <line x1="20" y1="220" x2="740" y2="220" stroke="#21262d" stroke-width="1" stroke-dasharray="2,4"/>
+            <line x1="20" y1="220" x2="740" y2="220" stroke="#23404a" stroke-width="1" stroke-dasharray="2,4"/>
 
             <g font-family="JetBrains Mono, monospace" font-size="11">
-                <text x="20" y="248" fill="#76B900" font-weight="700" letter-spacing="1">QUERY &mdash; per analyst question</text>
+                <text x="20" y="248" fill="#83c395" font-weight="700" letter-spacing="1">QUERY &mdash; per analyst question</text>
 
-                <rect x="20"  y="270" width="170" height="48" rx="6" fill="#161b22" stroke="#21262d"/>
-                <text x="105" y="290" text-anchor="middle" fill="#e6edf3" font-size="10">&ldquo;Find moments when</text>
-                <text x="105" y="306" text-anchor="middle" fill="#e6edf3" font-size="10">forklift drops pallet&rdquo;</text>
+                <rect x="20"  y="270" width="170" height="48" rx="6" fill="#182f38" stroke="#23404a"/>
+                <text x="105" y="290" text-anchor="middle" fill="#ede7dd" font-size="10">&ldquo;Find moments when</text>
+                <text x="105" y="306" text-anchor="middle" fill="#ede7dd" font-size="10">forklift drops pallet&rdquo;</text>
 
-                <line x1="190" y1="294" x2="220" y2="294" stroke="#76B900" stroke-width="2" marker-end="url(#arr)"/>
+                <line x1="190" y1="294" x2="220" y2="294" stroke="#83c395" stroke-width="2" marker-end="url(#arr)"/>
 
-                <rect x="220" y="270" width="140" height="48" rx="6" fill="#161b22" stroke="#76B900"/>
-                <text x="290" y="290" text-anchor="middle" fill="#76B900" font-weight="700">Embed query</text>
-                <text x="290" y="306" text-anchor="middle" fill="#8b949e" font-size="9">same model, MRL-trunc</text>
+                <rect x="220" y="270" width="140" height="48" rx="6" fill="#182f38" stroke="#83c395"/>
+                <text x="290" y="290" text-anchor="middle" fill="#83c395" font-weight="700">Embed query</text>
+                <text x="290" y="306" text-anchor="middle" fill="#8ca5a9" font-size="9">same model, MRL-trunc</text>
 
-                <line x1="360" y1="294" x2="390" y2="294" stroke="#76B900" stroke-width="2" marker-end="url(#arr)"/>
+                <line x1="360" y1="294" x2="390" y2="294" stroke="#83c395" stroke-width="2" marker-end="url(#arr)"/>
 
-                <rect x="390" y="270" width="140" height="48" rx="6" fill="#161b22" stroke="#21262d"/>
-                <text x="460" y="290" text-anchor="middle" fill="#e6edf3">ANN &nbsp; top-N</text>
-                <text x="460" y="306" text-anchor="middle" fill="#8b949e" font-size="9">N &asymp; 100&ndash;200 clips</text>
+                <rect x="390" y="270" width="140" height="48" rx="6" fill="#182f38" stroke="#23404a"/>
+                <text x="460" y="290" text-anchor="middle" fill="#ede7dd">ANN &nbsp; top-N</text>
+                <text x="460" y="306" text-anchor="middle" fill="#8ca5a9" font-size="9">N &asymp; 100&ndash;200 clips</text>
 
-                <line x1="530" y1="294" x2="560" y2="294" stroke="#76B900" stroke-width="2" marker-end="url(#arr)"/>
+                <line x1="530" y1="294" x2="560" y2="294" stroke="#83c395" stroke-width="2" marker-end="url(#arr)"/>
 
-                <rect x="560" y="270" width="180" height="48" rx="6" fill="#161b22" stroke="#76B900"/>
-                <text x="650" y="290" text-anchor="middle" fill="#76B900" font-weight="700">Qwen3-Reranker</text>
-                <text x="650" y="306" text-anchor="middle" fill="#8b949e" font-size="9">cross-encoder &rarr; top-K</text>
+                <rect x="560" y="270" width="180" height="48" rx="6" fill="#182f38" stroke="#83c395"/>
+                <text x="650" y="290" text-anchor="middle" fill="#83c395" font-weight="700">Qwen3-Reranker</text>
+                <text x="650" y="306" text-anchor="middle" fill="#8ca5a9" font-size="9">cross-encoder &rarr; top-K</text>
 
-                <line x1="650" y1="318" x2="650" y2="358" stroke="#76B900" stroke-width="2" marker-end="url(#arr)"/>
+                <line x1="650" y1="318" x2="650" y2="358" stroke="#83c395" stroke-width="2" marker-end="url(#arr)"/>
 
-                <rect x="540" y="358" width="220" height="48" rx="6" fill="#161b22" stroke="#76B900"/>
-                <text x="650" y="378" text-anchor="middle" fill="#76B900" font-weight="700">Qwen3-VL &nbsp;(analyst)</text>
-                <text x="650" y="394" text-anchor="middle" fill="#8b949e" font-size="9">long context, full top-K clips</text>
+                <rect x="540" y="358" width="220" height="48" rx="6" fill="#182f38" stroke="#83c395"/>
+                <text x="650" y="378" text-anchor="middle" fill="#83c395" font-weight="700">Qwen3-VL &nbsp;(analyst)</text>
+                <text x="650" y="394" text-anchor="middle" fill="#8ca5a9" font-size="9">long context, full top-K clips</text>
 
-                <line x1="540" y1="382" x2="510" y2="382" stroke="#76B900" stroke-width="2" marker-end="url(#arr)"/>
+                <line x1="540" y1="382" x2="510" y2="382" stroke="#83c395" stroke-width="2" marker-end="url(#arr)"/>
 
-                <rect x="320" y="358" width="190" height="48" rx="6" fill="#161b22" stroke="#21262d"/>
-                <text x="415" y="378" text-anchor="middle" fill="#e6edf3">Answer + timestamps</text>
-                <text x="415" y="394" text-anchor="middle" fill="#8b949e" font-size="9">[12.3s &ndash; 14.7s] + bbox</text>
+                <rect x="320" y="358" width="190" height="48" rx="6" fill="#182f38" stroke="#23404a"/>
+                <text x="415" y="378" text-anchor="middle" fill="#ede7dd">Answer + timestamps</text>
+                <text x="415" y="394" text-anchor="middle" fill="#8ca5a9" font-size="9">[12.3s &ndash; 14.7s] + bbox</text>
             </g>
         </svg>
         <div class="figure-caption">FIG 1 &mdash; Ingest writes clip vectors to a shared index; queries hit the same index, rerank, and ground in original footage.</div>
@@ -594,24 +594,24 @@
         <svg viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Frame sampling strategies comparison">
             <defs>
                 <pattern id="evt" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
-                    <rect width="6" height="6" fill="#76B90033"/>
-                    <line x1="0" y1="0" x2="0" y2="6" stroke="#76B900" stroke-width="1"/>
+                    <rect width="6" height="6" fill="#83c39533"/>
+                    <line x1="0" y1="0" x2="0" y2="6" stroke="#83c395" stroke-width="1"/>
                 </pattern>
             </defs>
 
-            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#e6edf3">
-                <text x="0" y="20" fill="#8b949e">Source video timeline (10 min)</text>
-                <rect x="0" y="30" width="720" height="22" fill="#161b22" stroke="#21262d"/>
+            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#ede7dd">
+                <text x="0" y="20" fill="#8ca5a9">Source video timeline (10 min)</text>
+                <rect x="0" y="30" width="720" height="22" fill="#182f38" stroke="#23404a"/>
                 <rect x="300" y="30" width="120" height="22" fill="url(#evt)"/>
-                <text x="360" y="46" text-anchor="middle" fill="#76B900" font-weight="700" font-size="10">EVENT</text>
-                <text x="0" y="68" fill="#8b949e" font-size="9">0:00</text>
-                <text x="690" y="68" fill="#8b949e" font-size="9">10:00</text>
+                <text x="360" y="46" text-anchor="middle" fill="#83c395" font-weight="700" font-size="10">EVENT</text>
+                <text x="0" y="68" fill="#8ca5a9" font-size="9">0:00</text>
+                <text x="690" y="68" fill="#8ca5a9" font-size="9">10:00</text>
             </g>
 
-            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#e6edf3">
-                <text x="0" y="100" fill="#e6edf3">UNIFORM &nbsp;(every 30 s)</text>
-                <rect x="0" y="110" width="720" height="18" fill="#0d1117" stroke="#21262d"/>
-                <g fill="#8b949e">
+            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#ede7dd">
+                <text x="0" y="100" fill="#ede7dd">UNIFORM &nbsp;(every 30 s)</text>
+                <rect x="0" y="110" width="720" height="18" fill="#13272f" stroke="#23404a"/>
+                <g fill="#8ca5a9">
                     <rect x="36"  y="110" width="2" height="18"/>
                     <rect x="72"  y="110" width="2" height="18"/>
                     <rect x="108" y="110" width="2" height="18"/>
@@ -632,46 +632,46 @@
                     <rect x="648" y="110" width="2" height="18"/>
                     <rect x="684" y="110" width="2" height="18"/>
                 </g>
-                <rect x="300" y="110" width="120" height="18" fill="none" stroke="#76B900" stroke-dasharray="2,2"/>
-                <text x="540" y="146" text-anchor="middle" fill="#8b949e" font-size="9">3 frames inside the event window &mdash; may miss the moment of action</text>
+                <rect x="300" y="110" width="120" height="18" fill="none" stroke="#83c395" stroke-dasharray="2,2"/>
+                <text x="540" y="146" text-anchor="middle" fill="#8ca5a9" font-size="9">3 frames inside the event window &mdash; may miss the moment of action</text>
             </g>
 
             <g font-family="JetBrains Mono, monospace" font-size="10">
-                <text x="0" y="170" fill="#e6edf3">SCENE-CHANGE &nbsp;(PySceneDetect / frame-diff)</text>
-                <rect x="0" y="180" width="720" height="18" fill="#0d1117" stroke="#21262d"/>
-                <g fill="#8b949e">
+                <text x="0" y="170" fill="#ede7dd">SCENE-CHANGE &nbsp;(PySceneDetect / frame-diff)</text>
+                <rect x="0" y="180" width="720" height="18" fill="#13272f" stroke="#23404a"/>
+                <g fill="#8ca5a9">
                     <rect x="60"  y="180" width="2" height="18"/>
                     <rect x="150" y="180" width="2" height="18"/>
                     <rect x="240" y="180" width="2" height="18"/>
-                    <rect x="305" y="180" width="2" height="18" fill="#76B900"/>
-                    <rect x="370" y="180" width="2" height="18" fill="#76B900"/>
-                    <rect x="415" y="180" width="2" height="18" fill="#76B900"/>
+                    <rect x="305" y="180" width="2" height="18" fill="#83c395"/>
+                    <rect x="370" y="180" width="2" height="18" fill="#83c395"/>
+                    <rect x="415" y="180" width="2" height="18" fill="#83c395"/>
                     <rect x="510" y="180" width="2" height="18"/>
                     <rect x="610" y="180" width="2" height="18"/>
                 </g>
-                <rect x="300" y="180" width="120" height="18" fill="none" stroke="#76B900" stroke-dasharray="2,2"/>
-                <text x="540" y="216" text-anchor="middle" fill="#8b949e" font-size="9">Cuts cluster at shot boundaries &mdash; usually matches the event onset</text>
+                <rect x="300" y="180" width="120" height="18" fill="none" stroke="#83c395" stroke-dasharray="2,2"/>
+                <text x="540" y="216" text-anchor="middle" fill="#8ca5a9" font-size="9">Cuts cluster at shot boundaries &mdash; usually matches the event onset</text>
             </g>
 
             <g font-family="JetBrains Mono, monospace" font-size="10">
-                <text x="0" y="240" fill="#e6edf3">MOTION-ADAPTIVE &nbsp;(optical flow / event-detector)</text>
-                <rect x="0" y="250" width="720" height="18" fill="#0d1117" stroke="#21262d"/>
-                <g fill="#8b949e">
+                <text x="0" y="240" fill="#ede7dd">MOTION-ADAPTIVE &nbsp;(optical flow / event-detector)</text>
+                <rect x="0" y="250" width="720" height="18" fill="#13272f" stroke="#23404a"/>
+                <g fill="#8ca5a9">
                     <rect x="120" y="250" width="2" height="18"/>
                     <rect x="220" y="250" width="2" height="18"/>
-                    <rect x="296" y="250" width="2" height="18" fill="#76B900"/>
-                    <rect x="306" y="250" width="2" height="18" fill="#76B900"/>
-                    <rect x="316" y="250" width="2" height="18" fill="#76B900"/>
-                    <rect x="328" y="250" width="2" height="18" fill="#76B900"/>
-                    <rect x="342" y="250" width="2" height="18" fill="#76B900"/>
-                    <rect x="358" y="250" width="2" height="18" fill="#76B900"/>
-                    <rect x="376" y="250" width="2" height="18" fill="#76B900"/>
-                    <rect x="394" y="250" width="2" height="18" fill="#76B900"/>
-                    <rect x="408" y="250" width="2" height="18" fill="#76B900"/>
+                    <rect x="296" y="250" width="2" height="18" fill="#83c395"/>
+                    <rect x="306" y="250" width="2" height="18" fill="#83c395"/>
+                    <rect x="316" y="250" width="2" height="18" fill="#83c395"/>
+                    <rect x="328" y="250" width="2" height="18" fill="#83c395"/>
+                    <rect x="342" y="250" width="2" height="18" fill="#83c395"/>
+                    <rect x="358" y="250" width="2" height="18" fill="#83c395"/>
+                    <rect x="376" y="250" width="2" height="18" fill="#83c395"/>
+                    <rect x="394" y="250" width="2" height="18" fill="#83c395"/>
+                    <rect x="408" y="250" width="2" height="18" fill="#83c395"/>
                     <rect x="500" y="250" width="2" height="18"/>
                     <rect x="640" y="250" width="2" height="18"/>
                 </g>
-                <rect x="300" y="250" width="120" height="18" fill="none" stroke="#76B900" stroke-dasharray="2,2"/>
+                <rect x="300" y="250" width="120" height="18" fill="none" stroke="#83c395" stroke-dasharray="2,2"/>
             </g>
         </svg>
         <div class="figure-caption">FIG 2 &mdash; Same 10-min video, three sampling strategies. Green ticks fall inside the event window; grey ticks outside.</div>
@@ -708,79 +708,79 @@
 
     <div class="figure">
         <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="M-RoPE 3D coordinate system">
-            <g transform="translate(40,40)" font-family="JetBrains Mono, monospace" font-size="10" fill="#e6edf3">
+            <g transform="translate(40,40)" font-family="JetBrains Mono, monospace" font-size="10" fill="#ede7dd">
                 <!-- isometric box -->
-                <g stroke="#21262d" stroke-width="1" fill="none">
+                <g stroke="#23404a" stroke-width="1" fill="none">
                     <!-- back face (lighter) -->
-                    <polygon points="60,20 260,20 260,180 60,180" stroke="#21262d" fill="#0d1117"/>
+                    <polygon points="60,20 260,20 260,180 60,180" stroke="#23404a" fill="#13272f"/>
                     <!-- top face (parallelogram) -->
-                    <polygon points="60,20 260,20 320,-30 120,-30" stroke="#21262d" fill="#161b22"/>
+                    <polygon points="60,20 260,20 320,-30 120,-30" stroke="#23404a" fill="#182f38"/>
                     <!-- right face -->
-                    <polygon points="260,20 260,180 320,130 320,-30" stroke="#21262d" fill="#0a0a0a"/>
+                    <polygon points="260,20 260,180 320,130 320,-30" stroke="#23404a" fill="#0f2027"/>
                 </g>
 
                 <!-- axes -->
-                <line x1="60" y1="180" x2="60" y2="220" stroke="#76B900" stroke-width="2" marker-end="url(#arrAxis)"/>
-                <line x1="60" y1="180" x2="280" y2="180" stroke="#76B900" stroke-width="2" marker-end="url(#arrAxis)"/>
-                <line x1="60" y1="180" x2="-10" y2="245" stroke="#76B900" stroke-width="2" marker-end="url(#arrAxis)"/>
+                <line x1="60" y1="180" x2="60" y2="220" stroke="#83c395" stroke-width="2" marker-end="url(#arrAxis)"/>
+                <line x1="60" y1="180" x2="280" y2="180" stroke="#83c395" stroke-width="2" marker-end="url(#arrAxis)"/>
+                <line x1="60" y1="180" x2="-10" y2="245" stroke="#83c395" stroke-width="2" marker-end="url(#arrAxis)"/>
                 <defs>
                     <marker id="arrAxis" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                        <path d="M0,0 L10,5 L0,10 z" fill="#76B900"/>
+                        <path d="M0,0 L10,5 L0,10 z" fill="#83c395"/>
                     </marker>
                 </defs>
-                <text x="290" y="184" fill="#76B900" font-weight="700">W (width)</text>
-                <text x="65"  y="234" fill="#76B900" font-weight="700">H (height)</text>
-                <text x="-20" y="262" fill="#76B900" font-weight="700">T (time)</text>
+                <text x="290" y="184" fill="#83c395" font-weight="700">W (width)</text>
+                <text x="65"  y="234" fill="#83c395" font-weight="700">H (height)</text>
+                <text x="-20" y="262" fill="#83c395" font-weight="700">T (time)</text>
 
                 <!-- tokens scattered -->
-                <g fill="#76B900">
+                <g fill="#83c395">
                     <circle cx="100" cy="80" r="3.5"/>
                     <circle cx="180" cy="110" r="3.5"/>
                     <circle cx="220" cy="60" r="3.5"/>
                     <circle cx="135" cy="140" r="3.5"/>
                     <circle cx="200" cy="160" r="3.5"/>
                 </g>
-                <g fill="#ffa657">
+                <g fill="#eac48b">
                     <circle cx="150" cy="40" r="3.5"/>
                     <circle cx="230" cy="100" r="3.5"/>
                     <circle cx="190" cy="20" r="3.5"/>
                 </g>
-                <g fill="#79c0ff">
+                <g fill="#a8cee8">
                     <circle cx="260" cy="80" r="3.5"/>
                     <circle cx="290" cy="50" r="3.5"/>
                 </g>
 
                 <!-- legend -->
-                <g font-size="9" fill="#8b949e">
-                    <circle cx="60" cy="280" r="3.5" fill="#76B900"/>
+                <g font-size="9" fill="#8ca5a9">
+                    <circle cx="60" cy="280" r="3.5" fill="#83c395"/>
                     <text x="72" y="284">frame t=0</text>
-                    <circle cx="160" cy="280" r="3.5" fill="#ffa657"/>
+                    <circle cx="160" cy="280" r="3.5" fill="#eac48b"/>
                     <text x="172" y="284">frame t=8</text>
-                    <circle cx="260" cy="280" r="3.5" fill="#79c0ff"/>
+                    <circle cx="260" cy="280" r="3.5" fill="#a8cee8"/>
                     <text x="272" y="284">frame t=16</text>
                 </g>
             </g>
 
             <!-- dimension partition diagram on right -->
-            <g transform="translate(400,40)" font-family="JetBrains Mono, monospace" font-size="10" fill="#e6edf3">
-                <text x="0" y="0" fill="#8b949e">Embedding dim D partitioned per token:</text>
-                <rect x="0" y="14" width="280" height="32" fill="#161b22" stroke="#21262d"/>
-                <rect x="0"   y="14" width="93" height="32" fill="rgba(118,185,0,0.18)" stroke="#76B900"/>
-                <rect x="93"  y="14" width="93" height="32" fill="rgba(255,166,87,0.18)" stroke="#ffa657"/>
-                <rect x="186" y="14" width="94" height="32" fill="rgba(121,192,255,0.18)" stroke="#79c0ff"/>
-                <text x="46"  y="34" text-anchor="middle" fill="#76B900" font-weight="700">D_t  rot &omega;_t</text>
-                <text x="139" y="34" text-anchor="middle" fill="#ffa657" font-weight="700">D_h  rot &omega;_h</text>
-                <text x="233" y="34" text-anchor="middle" fill="#79c0ff" font-weight="700">D_w  rot &omega;_w</text>
+            <g transform="translate(400,40)" font-family="JetBrains Mono, monospace" font-size="10" fill="#ede7dd">
+                <text x="0" y="0" fill="#8ca5a9">Embedding dim D partitioned per token:</text>
+                <rect x="0" y="14" width="280" height="32" fill="#182f38" stroke="#23404a"/>
+                <rect x="0"   y="14" width="93" height="32" fill="rgba(131,195,149,0.18)" stroke="#83c395"/>
+                <rect x="93"  y="14" width="93" height="32" fill="rgba(234,196,139,0.18)" stroke="#eac48b"/>
+                <rect x="186" y="14" width="94" height="32" fill="rgba(168,206,232,0.18)" stroke="#a8cee8"/>
+                <text x="46"  y="34" text-anchor="middle" fill="#83c395" font-weight="700">D_t  rot &omega;_t</text>
+                <text x="139" y="34" text-anchor="middle" fill="#eac48b" font-weight="700">D_h  rot &omega;_h</text>
+                <text x="233" y="34" text-anchor="middle" fill="#a8cee8" font-weight="700">D_w  rot &omega;_w</text>
 
-                <text x="0" y="72" fill="#8b949e">Token at (t, h, w) = (8, 12, 47):</text>
-                <g font-size="10" fill="#e6edf3">
+                <text x="0" y="72" fill="#8ca5a9">Token at (t, h, w) = (8, 12, 47):</text>
+                <g font-size="10" fill="#ede7dd">
                     <text x="0" y="92">&bull; first  D_t dims rotated by &theta;_t = 8 &middot; &omega;_t</text>
                     <text x="0" y="108">&bull; next   D_h dims rotated by &theta;_h = 12 &middot; &omega;_h</text>
                     <text x="0" y="124">&bull; final  D_w dims rotated by &theta;_w = 47 &middot; &omega;_w</text>
                 </g>
 
-                <text x="0" y="160" fill="#8b949e">Consequences:</text>
-                <g font-size="10" fill="#e6edf3">
+                <text x="0" y="160" fill="#8ca5a9">Consequences:</text>
+                <g font-size="10" fill="#ede7dd">
                     <text x="0" y="180">&bull; same patch, different frame &rarr; only D_t rotates</text>
                     <text x="0" y="196">&bull; same frame, different patch &rarr; only D_h,D_w rotate</text>
                     <text x="0" y="212">&bull; image is just T=1 &rarr; no retrain needed</text>
@@ -1013,90 +1013,90 @@ report = proc.decode(vlm.generate(**inputs, max_new_tokens=<span class="num">800
         <svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Edge / cloud deployment topology">
             <defs>
                 <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                    <path d="M0,0 L10,5 L0,10 z" fill="#76B900"/>
+                    <path d="M0,0 L10,5 L0,10 z" fill="#83c395"/>
                 </marker>
             </defs>
 
             <!-- edge zone -->
             <g font-family="JetBrains Mono, monospace" font-size="11">
-                <rect x="10" y="10" width="330" height="340" rx="10" fill="rgba(118,185,0,0.04)" stroke="#76B900" stroke-dasharray="4,3"/>
-                <text x="25" y="32" fill="#76B900" font-weight="700" letter-spacing="1">EDGE  (camera-adjacent)</text>
+                <rect x="10" y="10" width="330" height="340" rx="10" fill="rgba(131,195,149,0.04)" stroke="#83c395" stroke-dasharray="4,3"/>
+                <text x="25" y="32" fill="#83c395" font-weight="700" letter-spacing="1">EDGE  (camera-adjacent)</text>
 
                 <!-- cameras -->
-                <g fill="#161b22" stroke="#21262d">
+                <g fill="#182f38" stroke="#23404a">
                     <rect x="30"  y="60" width="60" height="32" rx="4"/>
                     <rect x="30"  y="100" width="60" height="32" rx="4"/>
                     <rect x="30"  y="140" width="60" height="32" rx="4"/>
                     <rect x="30"  y="180" width="60" height="32" rx="4"/>
                 </g>
-                <g fill="#8b949e" font-size="9">
+                <g fill="#8ca5a9" font-size="9">
                     <text x="60" y="80" text-anchor="middle">cam-01</text>
                     <text x="60" y="120" text-anchor="middle">cam-02</text>
                     <text x="60" y="160" text-anchor="middle">cam-03</text>
                     <text x="60" y="200" text-anchor="middle">&hellip; cam-N</text>
                 </g>
 
-                <line x1="90" y1="76"  x2="160" y2="125" stroke="#8b949e" stroke-width="1.2"/>
-                <line x1="90" y1="116" x2="160" y2="130" stroke="#8b949e" stroke-width="1.2"/>
-                <line x1="90" y1="156" x2="160" y2="135" stroke="#8b949e" stroke-width="1.2"/>
-                <line x1="90" y1="196" x2="160" y2="140" stroke="#8b949e" stroke-width="1.2"/>
+                <line x1="90" y1="76"  x2="160" y2="125" stroke="#8ca5a9" stroke-width="1.2"/>
+                <line x1="90" y1="116" x2="160" y2="130" stroke="#8ca5a9" stroke-width="1.2"/>
+                <line x1="90" y1="156" x2="160" y2="135" stroke="#8ca5a9" stroke-width="1.2"/>
+                <line x1="90" y1="196" x2="160" y2="140" stroke="#8ca5a9" stroke-width="1.2"/>
 
                 <!-- edge appliance -->
-                <rect x="160" y="80" width="160" height="180" rx="6" fill="#0d1117" stroke="#76B900"/>
-                <text x="240" y="100" text-anchor="middle" fill="#76B900" font-weight="700" font-size="10">Edge appliance</text>
-                <text x="240" y="114" text-anchor="middle" fill="#8b949e" font-size="9">Jetson Thor / L40S</text>
+                <rect x="160" y="80" width="160" height="180" rx="6" fill="#13272f" stroke="#83c395"/>
+                <text x="240" y="100" text-anchor="middle" fill="#83c395" font-weight="700" font-size="10">Edge appliance</text>
+                <text x="240" y="114" text-anchor="middle" fill="#8ca5a9" font-size="9">Jetson Thor / L40S</text>
 
-                <rect x="172" y="128" width="136" height="28" rx="4" fill="#161b22" stroke="#21262d"/>
-                <text x="240" y="146" text-anchor="middle" fill="#e6edf3" font-size="9">Decode &amp; chunk</text>
+                <rect x="172" y="128" width="136" height="28" rx="4" fill="#182f38" stroke="#23404a"/>
+                <text x="240" y="146" text-anchor="middle" fill="#ede7dd" font-size="9">Decode &amp; chunk</text>
 
-                <rect x="172" y="162" width="136" height="28" rx="4" fill="#161b22" stroke="#76B900"/>
-                <text x="240" y="180" text-anchor="middle" fill="#76B900" font-size="9">Qwen3-Embedding-VL-2B</text>
+                <rect x="172" y="162" width="136" height="28" rx="4" fill="#182f38" stroke="#83c395"/>
+                <text x="240" y="180" text-anchor="middle" fill="#83c395" font-size="9">Qwen3-Embedding-VL-2B</text>
 
-                <rect x="172" y="196" width="136" height="28" rx="4" fill="#161b22" stroke="#21262d"/>
-                <text x="240" y="214" text-anchor="middle" fill="#e6edf3" font-size="9">Qwen3-Reranker-0.6B</text>
+                <rect x="172" y="196" width="136" height="28" rx="4" fill="#182f38" stroke="#23404a"/>
+                <text x="240" y="214" text-anchor="middle" fill="#ede7dd" font-size="9">Qwen3-Reranker-0.6B</text>
 
-                <text x="240" y="244" text-anchor="middle" fill="#8b949e" font-size="8">(optional first-pass filter)</text>
+                <text x="240" y="244" text-anchor="middle" fill="#8ca5a9" font-size="8">(optional first-pass filter)</text>
 
-                <text x="25" y="290" fill="#8b949e" font-size="9">Leaves the site:</text>
-                <text x="25" y="306" fill="#e6edf3" font-size="9">&bull; 512-d clip vectors</text>
-                <text x="25" y="320" fill="#e6edf3" font-size="9">&bull; clip metadata (id, ts)</text>
-                <text x="25" y="334" fill="#e6edf3" font-size="9">&bull; footage stays local</text>
+                <text x="25" y="290" fill="#8ca5a9" font-size="9">Leaves the site:</text>
+                <text x="25" y="306" fill="#ede7dd" font-size="9">&bull; 512-d clip vectors</text>
+                <text x="25" y="320" fill="#ede7dd" font-size="9">&bull; clip metadata (id, ts)</text>
+                <text x="25" y="334" fill="#ede7dd" font-size="9">&bull; footage stays local</text>
             </g>
 
             <!-- WAN -->
             <g font-family="JetBrains Mono, monospace" font-size="10">
-                <line x1="340" y1="180" x2="420" y2="180" stroke="#76B900" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arr2)"/>
-                <text x="380" y="172" text-anchor="middle" fill="#8b949e" font-size="9">vectors over WAN</text>
-                <text x="380" y="198" text-anchor="middle" fill="#8b949e" font-size="9">(low bandwidth)</text>
+                <line x1="340" y1="180" x2="420" y2="180" stroke="#83c395" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arr2)"/>
+                <text x="380" y="172" text-anchor="middle" fill="#8ca5a9" font-size="9">vectors over WAN</text>
+                <text x="380" y="198" text-anchor="middle" fill="#8ca5a9" font-size="9">(low bandwidth)</text>
             </g>
 
             <!-- cloud zone -->
             <g font-family="JetBrains Mono, monospace" font-size="11">
-                <rect x="420" y="10" width="330" height="340" rx="10" fill="rgba(121,192,255,0.04)" stroke="#79c0ff" stroke-dasharray="4,3"/>
-                <text x="435" y="32" fill="#79c0ff" font-weight="700" letter-spacing="1">CENTRAL  (cloud or on-prem)</text>
+                <rect x="420" y="10" width="330" height="340" rx="10" fill="rgba(168,206,232,0.04)" stroke="#a8cee8" stroke-dasharray="4,3"/>
+                <text x="435" y="32" fill="#a8cee8" font-weight="700" letter-spacing="1">CENTRAL  (cloud or on-prem)</text>
 
-                <rect x="440" y="60" width="290" height="40" rx="6" fill="#0d1117" stroke="#21262d"/>
-                <text x="585" y="84" text-anchor="middle" fill="#e6edf3">Vector index &nbsp;(HNSW / IVF-PQ)</text>
+                <rect x="440" y="60" width="290" height="40" rx="6" fill="#13272f" stroke="#23404a"/>
+                <text x="585" y="84" text-anchor="middle" fill="#ede7dd">Vector index &nbsp;(HNSW / IVF-PQ)</text>
 
-                <rect x="440" y="115" width="290" height="40" rx="6" fill="#0d1117" stroke="#76B900"/>
-                <text x="585" y="139" text-anchor="middle" fill="#76B900" font-weight="700">Qwen3-Reranker-4B</text>
+                <rect x="440" y="115" width="290" height="40" rx="6" fill="#13272f" stroke="#83c395"/>
+                <text x="585" y="139" text-anchor="middle" fill="#83c395" font-weight="700">Qwen3-Reranker-4B</text>
 
-                <rect x="440" y="170" width="290" height="40" rx="6" fill="#0d1117" stroke="#76B900"/>
-                <text x="585" y="194" text-anchor="middle" fill="#76B900" font-weight="700">Qwen3-VL-A3B / 32B  (analyst)</text>
+                <rect x="440" y="170" width="290" height="40" rx="6" fill="#13272f" stroke="#83c395"/>
+                <text x="585" y="194" text-anchor="middle" fill="#83c395" font-weight="700">Qwen3-VL-A3B / 32B  (analyst)</text>
 
-                <line x1="585" y1="100" x2="585" y2="115" stroke="#76B900" stroke-width="2" marker-end="url(#arr2)"/>
-                <line x1="585" y1="155" x2="585" y2="170" stroke="#76B900" stroke-width="2" marker-end="url(#arr2)"/>
+                <line x1="585" y1="100" x2="585" y2="115" stroke="#83c395" stroke-width="2" marker-end="url(#arr2)"/>
+                <line x1="585" y1="155" x2="585" y2="170" stroke="#83c395" stroke-width="2" marker-end="url(#arr2)"/>
 
                 <!-- analyst -->
-                <rect x="510" y="240" width="150" height="60" rx="6" fill="#161b22" stroke="#21262d"/>
-                <text x="585" y="262" text-anchor="middle" fill="#e6edf3" font-size="10">Analyst UI</text>
-                <text x="585" y="278" text-anchor="middle" fill="#8b949e" font-size="9">natural-language query &rarr;</text>
-                <text x="585" y="292" text-anchor="middle" fill="#8b949e" font-size="9">timestamps + bboxes</text>
+                <rect x="510" y="240" width="150" height="60" rx="6" fill="#182f38" stroke="#23404a"/>
+                <text x="585" y="262" text-anchor="middle" fill="#ede7dd" font-size="10">Analyst UI</text>
+                <text x="585" y="278" text-anchor="middle" fill="#8ca5a9" font-size="9">natural-language query &rarr;</text>
+                <text x="585" y="292" text-anchor="middle" fill="#8ca5a9" font-size="9">timestamps + bboxes</text>
 
-                <line x1="585" y1="240" x2="585" y2="210" stroke="#76B900" stroke-width="2" marker-end="url(#arr2)"/>
-                <line x1="540" y1="240" x2="540" y2="160" stroke="#8b949e" stroke-width="1.2" stroke-dasharray="3,3"/>
-                <text x="510" y="328" fill="#8b949e" font-size="9">Footage on demand:</text>
-                <text x="510" y="342" fill="#e6edf3" font-size="9">cloud requests clip-K back from edge</text>
+                <line x1="585" y1="240" x2="585" y2="210" stroke="#83c395" stroke-width="2" marker-end="url(#arr2)"/>
+                <line x1="540" y1="240" x2="540" y2="160" stroke="#8ca5a9" stroke-width="1.2" stroke-dasharray="3,3"/>
+                <text x="510" y="328" fill="#8ca5a9" font-size="9">Footage on demand:</text>
+                <text x="510" y="342" fill="#ede7dd" font-size="9">cloud requests clip-K back from edge</text>
             </g>
         </svg>
         <div class="figure-caption">FIG 4 &mdash; Two-tier topology: footage stays at the edge, only vectors travel to the central index, full clips are pulled back on demand for the analyst&rsquo;s top-K.</div>
