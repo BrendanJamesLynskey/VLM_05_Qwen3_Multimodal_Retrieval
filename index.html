@@ -6,7 +6,7 @@
     <title>VLM 05 — Qwen3-VL for Video Analytics: Clip Retrieval, Temporal Grounding &amp; Edge Deployment</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-primary: #0f2027;
@@ -18,9 +18,9 @@
             --accent-dim: #83c39544;
             --accent-glow: #83c39533;
             --border: #23404a;
-            --font-display: 'Space Grotesk', sans-serif;
-            --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-            --font-body: 'Inter', sans-serif;
+            --font-display: 'Sora', sans-serif;
+            --font-mono: 'Source Code Pro', 'Source Code Pro', monospace;
+            --font-body: 'Manrope', sans-serif;
             --max-width: 900px;
         }
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -505,7 +505,7 @@
                 </marker>
             </defs>
 
-            <g font-family="JetBrains Mono, monospace" font-size="11">
+            <g font-family="Source Code Pro, monospace" font-size="11">
                 <text x="20" y="22" fill="#83c395" font-weight="700" letter-spacing="1">INGEST &mdash; one-time, batch</text>
 
                 <rect x="20"  y="40" width="120" height="48" rx="6" fill="#182f38" stroke="#23404a"/>
@@ -537,7 +537,7 @@
 
             <line x1="20" y1="220" x2="740" y2="220" stroke="#23404a" stroke-width="1" stroke-dasharray="2,4"/>
 
-            <g font-family="JetBrains Mono, monospace" font-size="11">
+            <g font-family="Source Code Pro, monospace" font-size="11">
                 <text x="20" y="248" fill="#83c395" font-weight="700" letter-spacing="1">QUERY &mdash; per analyst question</text>
 
                 <rect x="20"  y="270" width="170" height="48" rx="6" fill="#182f38" stroke="#23404a"/>
@@ -599,7 +599,7 @@
                 </pattern>
             </defs>
 
-            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#ede7dd">
+            <g font-family="Source Code Pro, monospace" font-size="10" fill="#ede7dd">
                 <text x="0" y="20" fill="#8ca5a9">Source video timeline (10 min)</text>
                 <rect x="0" y="30" width="720" height="22" fill="#182f38" stroke="#23404a"/>
                 <rect x="300" y="30" width="120" height="22" fill="url(#evt)"/>
@@ -608,7 +608,7 @@
                 <text x="690" y="68" fill="#8ca5a9" font-size="9">10:00</text>
             </g>
 
-            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#ede7dd">
+            <g font-family="Source Code Pro, monospace" font-size="10" fill="#ede7dd">
                 <text x="0" y="100" fill="#ede7dd">UNIFORM &nbsp;(every 30 s)</text>
                 <rect x="0" y="110" width="720" height="18" fill="#13272f" stroke="#23404a"/>
                 <g fill="#8ca5a9">
@@ -636,7 +636,7 @@
                 <text x="540" y="146" text-anchor="middle" fill="#8ca5a9" font-size="9">3 frames inside the event window &mdash; may miss the moment of action</text>
             </g>
 
-            <g font-family="JetBrains Mono, monospace" font-size="10">
+            <g font-family="Source Code Pro, monospace" font-size="10">
                 <text x="0" y="170" fill="#ede7dd">SCENE-CHANGE &nbsp;(PySceneDetect / frame-diff)</text>
                 <rect x="0" y="180" width="720" height="18" fill="#13272f" stroke="#23404a"/>
                 <g fill="#8ca5a9">
@@ -653,7 +653,7 @@
                 <text x="540" y="216" text-anchor="middle" fill="#8ca5a9" font-size="9">Cuts cluster at shot boundaries &mdash; usually matches the event onset</text>
             </g>
 
-            <g font-family="JetBrains Mono, monospace" font-size="10">
+            <g font-family="Source Code Pro, monospace" font-size="10">
                 <text x="0" y="240" fill="#ede7dd">MOTION-ADAPTIVE &nbsp;(optical flow / event-detector)</text>
                 <rect x="0" y="250" width="720" height="18" fill="#13272f" stroke="#23404a"/>
                 <g fill="#8ca5a9">
@@ -708,7 +708,7 @@
 
     <div class="figure">
         <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="M-RoPE 3D coordinate system">
-            <g transform="translate(40,40)" font-family="JetBrains Mono, monospace" font-size="10" fill="#ede7dd">
+            <g transform="translate(40,40)" font-family="Source Code Pro, monospace" font-size="10" fill="#ede7dd">
                 <!-- isometric box -->
                 <g stroke="#23404a" stroke-width="1" fill="none">
                     <!-- back face (lighter) -->
@@ -762,7 +762,7 @@
             </g>
 
             <!-- dimension partition diagram on right -->
-            <g transform="translate(400,40)" font-family="JetBrains Mono, monospace" font-size="10" fill="#ede7dd">
+            <g transform="translate(400,40)" font-family="Source Code Pro, monospace" font-size="10" fill="#ede7dd">
                 <text x="0" y="0" fill="#8ca5a9">Embedding dim D partitioned per token:</text>
                 <rect x="0" y="14" width="280" height="32" fill="#182f38" stroke="#23404a"/>
                 <rect x="0"   y="14" width="93" height="32" fill="rgba(131,195,149,0.18)" stroke="#83c395"/>
@@ -1018,7 +1018,7 @@ report = proc.decode(vlm.generate(**inputs, max_new_tokens=<span class="num">800
             </defs>
 
             <!-- edge zone -->
-            <g font-family="JetBrains Mono, monospace" font-size="11">
+            <g font-family="Source Code Pro, monospace" font-size="11">
                 <rect x="10" y="10" width="330" height="340" rx="10" fill="rgba(131,195,149,0.04)" stroke="#83c395" stroke-dasharray="4,3"/>
                 <text x="25" y="32" fill="#83c395" font-weight="700" letter-spacing="1">EDGE  (camera-adjacent)</text>
 
@@ -1064,14 +1064,14 @@ report = proc.decode(vlm.generate(**inputs, max_new_tokens=<span class="num">800
             </g>
 
             <!-- WAN -->
-            <g font-family="JetBrains Mono, monospace" font-size="10">
+            <g font-family="Source Code Pro, monospace" font-size="10">
                 <line x1="340" y1="180" x2="420" y2="180" stroke="#83c395" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arr2)"/>
                 <text x="380" y="172" text-anchor="middle" fill="#8ca5a9" font-size="9">vectors over WAN</text>
                 <text x="380" y="198" text-anchor="middle" fill="#8ca5a9" font-size="9">(low bandwidth)</text>
             </g>
 
             <!-- cloud zone -->
-            <g font-family="JetBrains Mono, monospace" font-size="11">
+            <g font-family="Source Code Pro, monospace" font-size="11">
                 <rect x="420" y="10" width="330" height="340" rx="10" fill="rgba(168,206,232,0.04)" stroke="#a8cee8" stroke-dasharray="4,3"/>
                 <text x="435" y="32" fill="#a8cee8" font-weight="700" letter-spacing="1">CENTRAL  (cloud or on-prem)</text>
 
